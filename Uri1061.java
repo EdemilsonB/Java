@@ -11,13 +11,13 @@ public class Uri1061 {
 		
 		int diaI = Integer.parseInt(entradaDiaI.substring(4));
 		int horaI = Integer.parseInt(entradaHoraI.substring(0,2));
-		int minI = Integer.parseInt(entradaHoraI.substring(5,2));
-		int segI = Integer.parseInt(entradaHoraI.substring(10,2));
+		int minI = Integer.parseInt(entradaHoraI.substring(5,7));
+		int segI = Integer.parseInt(entradaHoraI.substring(10,12));
 		
 		int diaF = Integer.parseInt(entradaDiaF.substring(4));
 		int horaF = Integer.parseInt(entradaHoraF.substring(0,2));
-		int minF = Integer.parseInt(entradaHoraF.substring(5,2));
-		int segF = Integer.parseInt(entradaHoraF.substring(10,2));
+		int minF = Integer.parseInt(entradaHoraF.substring(5,7));
+		int segF = Integer.parseInt(entradaHoraF.substring(10,12));
 
 		// tempos em segundos
 		int segNoDia, segNaHora, segNoMin, tempoI, tempoF;
@@ -30,12 +30,12 @@ public class Uri1061 {
 		// duracao
 		int tempoD, diaD, horaD, minD, segD;
 		tempoD = tempoF - tempoI;
-		diaD = tempoD % segNoDia ;
-		tempoD -= segNoDia;
-		horaD = tempoD % segNaHora;
-		tempoD -= segNaHora;
-		minD = tempoD % segNoMin;
-		segD = tempoD - segNaHora;
+		diaD = tempoD / segNoDia ;
+		tempoD -= ( segNoDia * diaD ) ;
+		horaD = tempoD / segNaHora;
+		tempoD -= (horaD * segNaHora );
+		minD = tempoD / segNoMin;
+		segD = tempoD % segNoMin;
 		
 		// saida
 		System.out.println( diaD + " dia(s)" );
