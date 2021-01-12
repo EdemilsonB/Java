@@ -5,26 +5,24 @@ public class Uri1151 {
 
 		Scanner teclado = new Scanner(System.in);
 		int entrada = teclado.nextInt();
+		int anterior = 0, atual = 1, proximo = 1, contador = 2;
+		StringBuilder msgSaida = new StringBuilder("");
 		
-		if ( entrada <= 1 ) {
-			System.out.println( "0 1");
+		if ( entrada == 1 ) {
+			msgSaida.append( "0\n");
 		}
 		else {
-			int anterior = 1, atual = 1, proximo = 1;
-			StringBuilder msgSaida = new StringBuilder("0 1 ");
-			
+			msgSaida.append( "0 ");
 			while (true) {
+				if ( contador == entrada ) { msgSaida.append( atual + "\n"); break; }
+				else { msgSaida.append( atual + " ");}
+				contador++;
 				proximo = anterior + atual;
-				if ( proximo >= entrada ) { msgSaida.append( atual + "\n"); break; }
-				else { msgSaida.append( atual + " "); }
-				
 				anterior = atual;
 				atual = proximo;
-				
 			}
-
-			System.out.print( msgSaida.toString() );
 		}
+		System.out.print( msgSaida.toString() );
 		teclado.close();
 	}
 }
