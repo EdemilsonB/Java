@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class Uri1181 {
+public class Uri1182 {
 	public static void main(String args[]) {
 
 		Scanner teclado = new Scanner(System.in);
-		int linha = Integer.parseInt( teclado.nextLine() );
+		int coluna = Integer.parseInt( teclado.nextLine() );
 		String operacao = teclado.nextLine();
 		
 		double matriz[][] = new double[12][12];
@@ -16,7 +16,7 @@ public class Uri1181 {
 		
 		double soma = 0;
 		for (int i = 0; i < 12; i++ ) {
-			soma += matriz[linha][i];
+			soma += matriz[i][coluna];
 		}
 		
 		if ( operacao == "S" ) {
