@@ -19,8 +19,6 @@ public class Uri1534 {
 			ordem = Integer.parseInt( entrada );
 			int matriz[][] = new int[ordem][ordem];
 			
-			// if ( ordem % 2 == 0 ) { loop = ( ordem  / 2 ) - 1; }
-			// else { loop = ( ordem / 2 ); }
 			loop = (ordem /2)-1;
 			
 			primeiro = 0;
