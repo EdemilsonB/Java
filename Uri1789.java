@@ -1,10 +1,9 @@
 import java.util.Scanner;
 
-public class Uri 1789 {
+public class Uri1789 {
 	public static void main(String args[]) {
 
 		Scanner teclado = new Scanner(System.in);
-		String entrada;
 		int qtdeLesmas, velocidade;
 		boolean n2, n3;
 		StringBuilder msgSaida = new StringBuilder("");
